@@ -2,9 +2,10 @@
 
 module.exports = (opts) => {
   var repo, branch, exec, modulePubFuncs, main, testSSH, sshPass,
-    sshRepo, repoBranch, repoCheck, repoDownload;
+    sshRepo, repoBranch, repoCheck, repoDownload, dest, copyRepositories;
 
   // setup defaults
+  dest = opts.destination;
   sshPass = false;
   repo = opts.repositories;
   branch = opts.branch;
@@ -69,10 +70,30 @@ module.exports = (opts) => {
     }
   }
 
+  copyRepositories = function () {
+    var cpTo;
+    if (dest.indexOf('.') == 0) {
+      cpTo = __dirname + '/' + dest
+    }
+    else {
+      cpTo = __dirname + dest
+    }
+    // #TODO: point relative path ../ to one up from __dirname
+    for (var i = 0; i < repo.length; i++) {
+      exec('cp -r '+
+        __dirname+'/.git_cache/'+ repo[i].split('/').reverse()[0] +
+        ' ' + cpTo + '/' + repo[i].split('/').reverse()[0]
+      );
+    };
+  }
+
   modulePubFuncs = function () { // makes public functions availible
     return {
       clone: function () {
         testSSH(main);
+      },
+      copy: function () {
+        copyRepositories();
       }
     }
   }
