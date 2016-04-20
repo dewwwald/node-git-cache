@@ -1,0 +1,22 @@
+{
+  "name": "node-git-cache",
+  "version": "1.0.0",
+  "description": "A basic git clone and chache (using this term loosely) tool for nodejs.",
+  "main": "git-tools.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/test-lib.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dewwwald/node-git-cache.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dewwwald/node-git-cache/issues"
+  },
+  "homepage": "https://github.com/dewwwald/node-git-cache#readme"
+}
