@@ -1,6 +1,6 @@
 {
   "name": "node-git-cache",
-  "version": "1.0.0b",
+  "version": "1.0.1",
   "description": "A basic git clone and chache (using this term loosely) tool for nodejs.",
   "main": "main/git-tools.js",
   "directories": {
