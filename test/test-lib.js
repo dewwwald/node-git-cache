@@ -9,4 +9,4 @@ var gTools = require(cwd+'/main/git-tools.js')({
 });
 
 gTools.clone();
-gTools.copy();
+// gTools;
