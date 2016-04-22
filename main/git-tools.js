@@ -72,7 +72,7 @@ module.exports = (opts) => {
 
   copyRepositories = function () {
     var cpTo;
-    if (dest.indexOf('.') == 0) {
+    if (dest.indexOf('./') == 0) {
       cpTo = __dirname + '/' + dest
     }
     else {
