@@ -5,8 +5,8 @@ var cwd = process.cwd();
 var gTools = require(cwd+'/main/git-tools.js')({
   repositories: ['dewwwald/tiny-test-repo'],
   branch: 'master',
-  destination: '.tmp'
+  destination: __dirname+'/app/.tmp'
 });
 
 gTools.clone();
-// gTools;
+

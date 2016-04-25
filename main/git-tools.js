@@ -85,7 +85,7 @@ module.exports = (opts) => {
       repo = [repo];
     }
     var cpTo, fileLocation;
-    cpTo = __dirname + '/' + dest
+    cpTo = dest
     // #TODO: point relative path ../ to one up from __dirname
     for (var i = 0; i < repo.length; i++) {
       fileLocation = cpTo + '/' + repo[i].split('/').reverse()[0];
