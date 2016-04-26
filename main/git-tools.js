@@ -89,9 +89,8 @@ module.exports = (opts) => {
     // #TODO: point relative path ../ to one up from __dirname
     for (var i = 0; i < repo.length; i++) {
       fileLocation = cpTo + '/' + repo[i].split('/').reverse()[0];
-      exec('mkdir -p ' + cpTo + ' && cp -r '+
-        __dirname+'/.git_cache/'+ repo[i].split('/').reverse()[0] +
-        ' ' + fileLocation
+      exec('mkdir -p ' + fileLocation + ' && cp -r '+
+        __dirname+'/.git_cache/'+ repo[i].split('/').reverse()[0] + '/* ' + fileLocation
       );
     };
   }
