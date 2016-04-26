@@ -11,5 +11,15 @@ var gTools = require('node-git-cache')({
   destination: __dirname+'/app/.tmp'
 });
 
-gTools.clone();
+gTools.clone(gTools.clone(function () {
+  console.log('Copying is complete');
+});
 ```
+
+## TODO
+- We still need to make this structure better (maybe use promises)
+- Make clone and copy chainable
+- Improve structure where possible
+
+## Feedback
+This was my first attempt at writing a Node plugin. Please provide feedback and report issues on the [github issue tracker](https://github.com/dewwwald/node-git-cache/issues).

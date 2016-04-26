@@ -8,5 +8,7 @@ var gTools = require(cwd+'/main/git-tools.js')({
   destination: __dirname+'/app/.tmp'
 });
 
-gTools.clone();
+gTools.clone(function () {
+  console.log('test is done');
+});
 
