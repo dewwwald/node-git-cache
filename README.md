@@ -11,7 +11,7 @@ var gTools = require('node-git-cache')({
   destination: __dirname+'/app/.tmp'
 });
 
-gTools.clone(gTools.clone(function () {
+gTools.clone(function () {
   console.log('Copying is complete');
 });
 ```

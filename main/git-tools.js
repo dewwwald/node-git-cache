@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = (opts) => {
+module.exports = function (opts) {
   var repo, branch, exec, modulePubFuncs, main, testSSH, sshPass, promise, fs,
     sshRepo, repoBranch, repoCheck, repoDownload, dest, copyRepositories;
 
